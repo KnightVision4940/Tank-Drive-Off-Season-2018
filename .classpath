@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="Tank-Drive-Off-Season-2018/src"/>
+	<classpathentry kind="lib" path="C:/Users/gabri/wpilib/java/current/lib/WPILib.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
