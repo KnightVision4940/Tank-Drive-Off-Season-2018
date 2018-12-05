@@ -24,5 +24,7 @@
 	<classpathentry kind="lib" path="C:/Users/Robot7/wpilib/java/current/lib/WPILib-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Robot7/wpilib/java/current/lib/wpiutil.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Robot7/wpilib/java/current/lib/wpiutil-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KnightVision/wpilib/user/java/lib/CTRE_Phoenix.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KnightVision/wpilib/user/java/lib/CTRE_Phoenix-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
