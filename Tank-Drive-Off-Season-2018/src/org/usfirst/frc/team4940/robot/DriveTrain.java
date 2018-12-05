@@ -1,11 +1,6 @@
 package org.usfirst.frc.team4940.robot;
-<<<<<<< Updated upstream
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-
-=======
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
->>>>>>> Stashed changes
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
@@ -28,7 +23,7 @@ public class DriveTrain {
 	}
 
 	public void drive(double speed, double turn) {
-		m_drive.curvatureDrive(speed, turn, false);
+		m_drive.tankDrive(speed, turn, false);
 
 	}
 
