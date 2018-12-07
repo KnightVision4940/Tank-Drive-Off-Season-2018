@@ -3,7 +3,7 @@ package org.usfirst.frc.team4940.robot;
 import edu.wpi.first.wpilibj.Joystick;
 
 public class JoyStick {
-	Joystick joystick = new Joystick(0);
+	static Joystick joystick = new Joystick(0);
 	
 	public static double yAxis(){
 		//This is to go forward or backward.

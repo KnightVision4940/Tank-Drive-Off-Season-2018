@@ -78,10 +78,20 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
+		//Driving not done
 		if(isForward == true){
-			
-		}else if(isForward == false)
-		DriveTrain.drive(JoyStick.yAxis(),JoyStick.xAxis());
+			DriveTrain.drive(JoyStick.yAxis(),JoyStick.xAxis());
+		}else if(isForward == false){
+		
+		}
+		
+		if(speed == 0 && isForward == true && JoyStick.yAxis() < 0){
+			isForward = false;
+		}else if(speed == 0 && isForward == true && JoyStick.yAxis() > 0){
+			isForward = true;
+		}
+		
+		
 	}
 
 	/**
