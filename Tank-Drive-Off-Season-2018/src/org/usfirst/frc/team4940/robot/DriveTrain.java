@@ -23,9 +23,18 @@ public class DriveTrain {
 
 	}
 
-	public static void drive(double speed, double turn) {
+	public static void driveForward(double speed, double turn) {
 		rspeed = speed;
-		m_drive.tankDrive(speed, turn, false);
+		if(JoyStick.yAxis() > 0){
+			m_drive.tankDrive(speed, turn, false);
+		}
+
+	}
+	public static void driveBackward(double speed, double turn) {
+		rspeed = speed;
+		if(JoyStick.yAxis() < 0){
+			m_drive.tankDrive(speed, turn, false);
+		}
 
 	}
 

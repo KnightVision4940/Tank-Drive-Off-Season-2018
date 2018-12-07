@@ -80,9 +80,9 @@ public class Robot extends TimedRobot {
 	public void teleopPeriodic() {
 		//Driving not done
 		if(isForward == true){
-			DriveTrain.drive(JoyStick.yAxis(),JoyStick.xAxis());
+			DriveTrain.driveForward(JoyStick.yAxis(),JoyStick.xAxis());
 		}else if(isForward == false){
-		
+			DriveTrain.driveBackward(JoyStick.yAxis(),JoyStick.xAxis());
 		}
 		
 		if(speed == 0 && isForward == true && JoyStick.yAxis() < 0){
