@@ -85,9 +85,9 @@ public class Robot extends TimedRobot {
 			DriveTrain.driveBackward(JoyStick.yAxis(),JoyStick.xAxis());
 		}
 		
-		if(speed == 0 && isForward == true && JoyStick.yAxis() < 0){
+		if(speed == 0 && isForward == false && JoyStick.yAxis() == 0){
 			isForward = false;
-		}else if(speed == 0 && isForward == true && JoyStick.yAxis() > 0){
+		}else if(speed == 0 && isForward == false && JoyStick.yAxis() == 0){
 			isForward = true;
 		}
 		
