@@ -87,7 +87,7 @@ public class Robot extends TimedRobot {
 		
 		if(speed == 0 && isForward == true && JoyStick.yAxis() < 0){
 			isForward = false;
-		}else if(speed == 0 && isForward == true && JoyStick.yAxis() > 0){
+		}else if(speed == 0 && isForward == false && JoyStick.yAxis() > 0){
 			isForward = true;
 		}
 		
