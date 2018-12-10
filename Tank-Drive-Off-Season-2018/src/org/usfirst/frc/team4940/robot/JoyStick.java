@@ -14,7 +14,7 @@ public class JoyStick {
 	public static double xAxis(){
 		//This is to go left or right.
 		//Change the number in the brackets to the appropriate axis.
-		return joystick.getRawAxis(1);
+		return joystick.getRawAxis(0);
 	}
 	
 	
