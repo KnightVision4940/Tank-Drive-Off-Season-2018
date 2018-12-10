@@ -6,7 +6,8 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 public class DriveTrain {
 
-	DifferentialDrive m_drive;
+	static DifferentialDrive m_drive;
+	static double rspeed;
 
 	public DriveTrain(int frontLeft, int frontRight, int backLeft, int backRight) {
 
@@ -22,8 +23,18 @@ public class DriveTrain {
 
 	}
 
-	public void drive(double speed, double turn) {
-		m_drive.tankDrive(speed, turn, false);
+	public static void driveForward(double speed, double turn) {
+		rspeed = speed;
+		if(JoyStick.yAxis() > 0){
+			m_drive.tankDrive(speed, turn, false);
+		}
+
+	}
+	public static void driveBackward(double speed, double turn) {
+		rspeed = speed;
+		if(JoyStick.yAxis() < 0){
+			m_drive.tankDrive(speed, turn, false);
+		}
 
 	}
 

@@ -23,6 +23,8 @@ public class Robot extends TimedRobot {
 	private static final String kCustomAuto = "My Auto";
 	private String m_autoSelected;
 	private SendableChooser<String> m_chooser = new SendableChooser<>();
+	static double speed = DriveTrain.rspeed;
+	static boolean isForward = true;
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -33,6 +35,7 @@ public class Robot extends TimedRobot {
 		m_chooser.addDefault("Default Auto", kDefaultAuto);
 		m_chooser.addObject("My Auto", kCustomAuto);
 		SmartDashboard.putData("Auto choices", m_chooser);
+		
 	}
 
 	/**
@@ -75,6 +78,20 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
+		//Driving not done
+		if(isForward == true){
+			DriveTrain.driveForward(JoyStick.yAxis(),JoyStick.xAxis());
+		}else if(isForward == false){
+			DriveTrain.driveBackward(JoyStick.yAxis(),JoyStick.xAxis());
+		}
+		
+		if(speed == 0 && isForward == true && JoyStick.yAxis() < 0){
+			isForward = false;
+		}else if(speed == 0 && isForward == true && JoyStick.yAxis() > 0){
+			isForward = true;
+		}
+		
+		
 	}
 
 	/**
