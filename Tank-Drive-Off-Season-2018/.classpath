@@ -21,7 +21,5 @@
 	<classpathentry kind="lib" path="C:/Users/KnightVision/wpilib/user/java/lib/CTRE_Phoenix-sources.jar"/>
 	<classpathentry kind="var" path="USERLIBS_DIR/CTRE_Phoenix-sources.jar"/>
 	<classpathentry kind="var" path="USERLIBS_DIR/CTRE_Phoenix.jar"/>
-	<classpathentry kind="var" path="USERLIBS_DIR/CTRE_Phoenix_WPIAPI-sources.jar"/>
-	<classpathentry kind="var" path="USERLIBS_DIR/CTRE_Phoenix_WPIAPI.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
