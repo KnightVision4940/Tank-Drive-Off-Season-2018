@@ -11,7 +11,7 @@ public class DriveTrain {
 	public static SpeedControllerGroup m_left;
 	public static SpeedControllerGroup m_right;
 
-	public static void initDriveTrain(int frontLeft, int frontRight, int backLeft, int backRight) {
+	public static void initDriveTrain(int frontLeft,int backLeft,int frontRight, int backRight) {
 
 		WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(frontLeft);
 		WPI_TalonSRX m_rearLeft = new WPI_TalonSRX(backLeft);

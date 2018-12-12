@@ -35,7 +35,7 @@ public class Robot extends TimedRobot {
 		m_chooser.addDefault("Default Auto", kDefaultAuto);
 		m_chooser.addObject("My Auto", kCustomAuto);
 		SmartDashboard.putData("Auto choices", m_chooser);
-		DriveTrain.initDriveTrain(1,2,3,4);
+		DriveTrain.initDriveTrain(13,15,2,0);
 		
 	}
 
