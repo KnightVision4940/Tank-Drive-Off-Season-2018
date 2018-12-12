@@ -35,6 +35,7 @@ public class Robot extends TimedRobot {
 		m_chooser.addDefault("Default Auto", kDefaultAuto);
 		m_chooser.addObject("My Auto", kCustomAuto);
 		SmartDashboard.putData("Auto choices", m_chooser);
+		DriveTrain.initDriveTrain(1,2,3,4);
 		
 	}
 
@@ -80,9 +81,9 @@ public class Robot extends TimedRobot {
 	public void teleopPeriodic() {
 		//Driving not done
 		if(isForward == true){
-			DriveTrain.driveForward(JoyStick.yAxis(),JoyStick.xAxis());
+			DriveTrain.driveForward(JoyStick.yAxis()* 0.3,JoyStick.xAxis()*0.3);
 		}else if(isForward == false){
-			DriveTrain.driveBackward(JoyStick.yAxis(),JoyStick.xAxis());
+			DriveTrain.driveBackward(JoyStick.yAxis()* 0.3,JoyStick.xAxis()*0.3);
 		}
 		
 		if(speed == 0 && isForward == true && JoyStick.yAxis() < 0){
