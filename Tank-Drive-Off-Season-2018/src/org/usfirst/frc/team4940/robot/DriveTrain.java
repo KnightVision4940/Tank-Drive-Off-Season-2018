@@ -18,7 +18,7 @@ public class DriveTrain {
 		WPI_TalonSRX m_frontRight = new WPI_TalonSRX(frontRight);
 		WPI_TalonSRX m_rearRight = new WPI_TalonSRX(backRight);
 		public static SpeedControllerGroup m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
-		
+	
 
 		m_drive = new DifferentialDrive(m_left, m_right);
 

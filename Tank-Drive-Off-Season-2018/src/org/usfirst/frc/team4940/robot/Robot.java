@@ -23,7 +23,7 @@ public class Robot extends TimedRobot {
 	private static final String kCustomAuto = "My Auto";
 	private String m_autoSelected;
 	private SendableChooser<String> m_chooser = new SendableChooser<>();
-	static double speed = DriveTrain.rspeed;
+	
 	static boolean isForward = true;
 
 	/**
@@ -80,6 +80,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
 		//Driving not done
+		double speed = DriveTrain.rspeed;
 		if(isForward == true){
 			DriveTrain.driveForward(JoyStick.yAxis()* 0.3,JoyStick.xAxis()*0.3);
 		}else if(isForward == false){
