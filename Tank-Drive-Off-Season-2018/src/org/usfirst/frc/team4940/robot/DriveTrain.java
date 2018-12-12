@@ -25,14 +25,14 @@ public class DriveTrain {
 	}
 
 	public static void driveForward(double speed, double turn) {
-		rspeed =
+		rspeed = m_left.get();
 		if(speed > 0){
 			m_drive.tankDrive(speed, turn, false);
 		}
 
 	}
 	public static void driveBackward(double speed, double turn) {
-		rspeed = speed;
+		rspeed = m_left.get();
 		if(speed < 0){
 			m_drive.tankDrive(speed, turn, false);
 		}
