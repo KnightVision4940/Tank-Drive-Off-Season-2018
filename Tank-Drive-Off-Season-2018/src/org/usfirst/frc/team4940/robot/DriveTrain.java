@@ -8,16 +8,18 @@ public class DriveTrain {
 
 	static DifferentialDrive m_drive;
 	static double rspeed;
+	public static SpeedControllerGroup m_left;
+	public static SpeedControllerGroup m_right;
 
 	public void initDriveTrain(int frontLeft, int frontRight, int backLeft, int backRight) {
 
 		WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(frontLeft);
 		WPI_TalonSRX m_rearLeft = new WPI_TalonSRX(backLeft);
-		public static SpeedControllerGroup m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft);
+		m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft);
 
 		WPI_TalonSRX m_frontRight = new WPI_TalonSRX(frontRight);
 		WPI_TalonSRX m_rearRight = new WPI_TalonSRX(backRight);
-		public static SpeedControllerGroup m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
+		m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
 	
 
 		m_drive = new DifferentialDrive(m_left, m_right);
