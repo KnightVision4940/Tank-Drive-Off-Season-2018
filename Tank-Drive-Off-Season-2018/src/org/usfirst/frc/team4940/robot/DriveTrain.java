@@ -14,15 +14,20 @@ public class DriveTrain {
 	public static void initDriveTrain(int frontLeft,int backLeft,int frontRight, int backRight) {
 
 		WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(frontLeft);
+		//m_frontLeft.setSafetyEnabled(false);
 		WPI_TalonSRX m_rearLeft = new WPI_TalonSRX(backLeft);
+		//m_rearLeft.setSafetyEnabled(false);
 		m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft);
 
 		WPI_TalonSRX m_frontRight = new WPI_TalonSRX(frontRight);
+		//m_frontRight.setSafetyEnabled(false);
 		WPI_TalonSRX m_rearRight = new WPI_TalonSRX(backRight);
+		//m_rearRight.setSafetyEnabled(false);
 		m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
 	
 
 		m_drive = new DifferentialDrive(m_left, m_right);
+		//m_drive.isSafetyEnabled();
 
 	}
 
